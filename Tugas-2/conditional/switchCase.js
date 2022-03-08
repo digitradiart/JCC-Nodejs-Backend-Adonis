@@ -15,3 +15,6 @@ var tanggal; // assign nilai variabel tanggal disini! (dengan angka antara 1 - 3
 var bulan; // assign nilai variabel bulan disini! (dengan angka antara 1 - 12)
 var tahun; // assign nilai variabel tahun disini! (dengan angka antara 1900 - 2200) 
 */
+var hari = 21;
+var bulan = 1;
+var tahun = 1945;
