@@ -1,0 +1,6 @@
+Data Peserta JCC Nodejs Backend Adonis
+1. Nama: Ayu Agustina
+2. Email: digitradiart@gmail.com
+3. Sistem Operasi yang digunakan: Linux Lite
+4. Akun GitHub: digitradiart
+5. Akun Telegram: @digitradiart
