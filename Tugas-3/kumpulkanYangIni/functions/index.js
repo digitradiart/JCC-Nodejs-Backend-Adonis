@@ -29,6 +29,6 @@ switch (args[2]) {
     console.log(introduce(name, age, address, hobby));
     break;
   default:
-    console.log('Input yang Anda berikan salah.');
+    console.log('Input yang Anda berikan salah. Pilih fungsi: teriak, kalikan, atau introduce');
     break;
 }

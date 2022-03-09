@@ -1,28 +1,37 @@
 // SOAL 1
-console.log('LOOPING PERTAMA');
-var i = 0;
-while (i < 20) {
-  i += 2;
-  console.log(`${i} - I will become a backend developer`);
-}
+function whileLoop() {
+  var number = 20;
+  console.log('LOOPING PERTAMA');
+  let i = 0;
+  while (i < number) {
+    i += 2;
+    console.log(`${i} - I will become a backend developer`);
+  }
 
-console.log('LOOPING KEDUA');
-while (i > 0) {
-  console.log(`${i} - I will become a backend developer`);
-  i -= 2;
-}
-
-// SOAL 2
-for (let i = 0; i < 20; ) {
-  i++;
-  if (i % 3 == 0 && i % 2 == 1) {
-    console.log(`${i} - I Love Coding`);
-  } else if (i % 2 == 0) {
-    console.log(`${i} - Berkualitas`);
-  } else {
-    console.log(`${i} - Santai`);
+  console.log('LOOPING KEDUA');
+  let j = number;
+  while (j > 0) {
+    console.log(`${j} - I will become a backend developer`);
+    j -= 2;
   }
 }
+// console.log(whileLoop());
+
+// SOAL 2
+function forLoop() {
+  let number = 20;
+  for (let i = 0; i < number; ) {
+    i++;
+    if (i % 3 == 0 && i % 2 == 1) {
+      console.log(`${i} - I Love Coding`);
+    } else if (i % 2 == 0) {
+      console.log(`${i} - Berkualitas`);
+    } else {
+      console.log(`${i} - Santai`);
+    }
+  }
+}
+// console.log(forLoop());
 
 // SOAL3
 function persegiPanjang(panjang, lebar) {
@@ -35,7 +44,7 @@ function persegiPanjang(panjang, lebar) {
   }
   return tampung;
 }
-console.log(persegiPanjang(8, 4));
+// console.log(persegiPanjang(8, 4));
 
 // SOAL 4
 function Tangga(tingkat) {
@@ -48,11 +57,9 @@ function Tangga(tingkat) {
   }
   return tampung;
 }
-
-console.log(Tangga(7));
+// console.log(Tangga(7));
 
 // SOAL5
-
 function papanCatur(petak) {
   var tampung = '';
   for (let baris = 0; baris < petak; baris++) {
@@ -77,5 +84,13 @@ function papanCatur(petak) {
   }
   return tampung;
 }
+// console.log(papanCatur(8));
 
-console.log(papanCatur(8));
+// export module
+module.exports = {
+  whileLoop: whileLoop,
+  forLoop: forLoop,
+  persegiPanjang: persegiPanjang,
+  Tangga: Tangga,
+  papanCatur: papanCatur,
+};
