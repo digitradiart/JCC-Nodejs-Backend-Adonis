@@ -167,7 +167,38 @@ Nama Lengkap:  Bintang Senjaya
 TTL:  Martapura 6/4/1970
 Hobi:  Berkebun  */
 
+var dataInput = [
+  ['0001', 'Roman Alamsyah', 'Bandar Lampung', '21/05/1989', 'Membaca'],
+  ['0002', 'Dika Sembiring', 'Medan', '10/10/1992', 'Bermain Gitar'],
+  ['0003', 'Winona', 'Ambon', '25/12/1965', 'Memasak'],
+  ['0004', 'Bintang Senjaya', 'Martapura', '6/4/1970', 'Berkebun'],
+];
+
+function dataHandling(dataInput) {
+  for (let i = 0; i < dataInput.length; i++) {
+    for (let j = 0; j < 5; j++) {
+      switch (j) {
+        case 0:
+          console.log(`Nomor ID: ${dataInput[i][j]}`);
+          break;
+        case 1:
+          console.log(`Nama Lengkap: ${dataInput[i][j]}`);
+          break;
+        case 2:
+          console.log(`TTL: ${dataInput[i][j]} ${dataInput[i][j + 1]}`);
+          j++;
+          break;
+        case 4:
+          console.log(`Hobi: ${dataInput[i][j]}`);
+          break;
+      }
+    }
+    console.log(' ');
+  }
+}
+
 /*
+
 Soal No. 5 (Balik Kata)
 Kamu telah mempelajari beberapa method yang dimiliki oleh String dan Array. String sebetulnya bersifat mirip sebuah array karena kita dapat mengakses karakter-karakter pada sebuah string layaknya mengakses elemen pada array.
 
@@ -208,4 +239,6 @@ module.exports = {
   rangeWithStep: rangeWithStep,
   sum: sum,
   balikKata: balikKata,
+  dataHandling: dataHandling,
+  dataInput: dataInput,
 };
