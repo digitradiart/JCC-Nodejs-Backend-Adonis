@@ -26,6 +26,6 @@ switch (args[2]) {
     console.log(balikKata(args[3]));
     break;
   default:
-    console.log('Inputan Salah, pilihlah: range, rangeWithStep, sum, atau balikKata');
+    console.log('Inputan Salah, pilihlah: range, rangeWithStep, sum, dataHandling, atau balikKata');
     break;
 }
