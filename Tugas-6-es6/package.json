@@ -4,8 +4,14 @@
   "description": "Tugas JCC Node JS, belajar ES6 dan mulai pakai Babel JS",
   "main": "index.js",
   "scripts": {
+    "babel": "./node_modules/.bin/babel",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ayu Agustina",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.7",
+    "@babel/preset-env": "^7.16.11"
+  }
 }
