@@ -1,0 +1,11 @@
+{
+  "name": "tugas-6-es6",
+  "version": "1.0.0",
+  "description": "Tugas JCC Node JS, belajar ES6 dan mulai pakai Babel JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ayu Agustina",
+  "license": "ISC"
+}
