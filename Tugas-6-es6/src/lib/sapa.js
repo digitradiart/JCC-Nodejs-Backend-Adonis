@@ -15,4 +15,4 @@ Output
 
 "halo selamat pagi, Abduh" */
 
-export const sapa = () => 'Halo semua';
+export const sapa = (nama) => `Halo! Selamat pagi, ${nama}.`;

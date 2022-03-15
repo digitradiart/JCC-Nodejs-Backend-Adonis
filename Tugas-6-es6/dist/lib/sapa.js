@@ -21,8 +21,8 @@ node dist sapa Abduh
 Output
 
 "halo selamat pagi, Abduh" */
-var sapa = function sapa() {
-  return 'Halo semua';
+var sapa = function sapa(nama) {
+  return "Halo! Selamat pagi, ".concat(nama, ".");
 };
 
 exports.sapa = sapa;
