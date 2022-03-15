@@ -1,7 +1,8 @@
-import { sapa } from './lib/sapa';
-import { convert } from './lib/convert';
-import { checkScore } from './lib/checkScore';
-import { filterData } from './lib/filterData';
+// import { sapa } from './lib/sapa';
+// import { convert } from './lib/convert';
+// import { checkScore } from './lib/checkScore';
+// import { filterData } from './lib/filterData';
+import { sapa, convert, checkScore, filterData } from './lib/functions';
 
 var args = process.argv;
 
