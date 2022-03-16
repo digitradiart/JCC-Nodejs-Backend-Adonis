@@ -22,3 +22,5 @@ names.map(function (nama, index) {
 jcc.classes.forEach(function (kelas) {
   console.log(kelas);
 });
+console.log('\n===========RELEASE 2 dan 3==========');
+jcc.runBatch();

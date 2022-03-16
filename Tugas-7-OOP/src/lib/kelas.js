@@ -1,3 +1,4 @@
+import Student from './student';
 export default class Kelas {
   constructor(name, level, instructor) {
     this._name = name;
@@ -23,5 +24,27 @@ export default class Kelas {
   }
   set instructor(x) {
     this._instructor = x;
+  }
+
+  static graduate(student) {
+    const graduate = {
+      participant: [],
+      completed: [],
+      mastered: [],
+    };
+
+    for (let i = 0; i < student._students.length; i++) {
+      const finalScore = student._students[i]._finalScore;
+      if (finalScore < 60) {
+        graduate.participant.push(student._students[i]);
+      }
+      if (finalScore >= 60 && finalScore <= 85) {
+        graduate.completed.push(student._students[i]);
+      }
+      if (finalScore > 85) {
+        graduate.mastered.push(student._students[i]);
+      }
+    }
+    return graduate;
   }
 }

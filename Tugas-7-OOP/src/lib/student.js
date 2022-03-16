@@ -4,4 +4,11 @@ export default class Student {
     this._scores = [];
     this._finalScore = 0;
   }
+
+  get finalscore() {
+    return this._finalScore;
+  }
+  set finalscore(x) {
+    this._finalScore = x;
+  }
 }
