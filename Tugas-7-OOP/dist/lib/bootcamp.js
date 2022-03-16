@@ -40,6 +40,15 @@ var Bootcamp = /*#__PURE__*/function () {
 
       this._kelas.push(kelas);
     }
+  }, {
+    key: "register",
+    value: function register(kelas, newStud) {
+      for (var i = 0; i < this._kelas.length; i++) {
+        if (kelas === this._kelas[i]._name) {
+          this._kelas[i]._students.push(newStud);
+        }
+      }
+    }
   }]);
 
   return Bootcamp;
