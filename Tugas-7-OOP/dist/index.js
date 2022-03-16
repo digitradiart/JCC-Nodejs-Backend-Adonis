@@ -6,10 +6,12 @@ var _student = _interopRequireDefault(require("./lib/student"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+console.log('===========RELEASE 0==========');
 var jcc = new _bootcamp["default"]('jabarcodingcamp');
 jcc.createClass('Laravel', 'beginner', 'abduh');
 jcc.createClass('React', 'beginner', 'abdul');
 console.log(jcc.classes);
+console.log('\n===========RELEASE 1==========');
 var names = ['regi', 'ahmad', 'bondra', 'iqbal', 'putri', 'rezky'];
 names.map(function (nama, index) {
   var newStud = new _student["default"](nama);
