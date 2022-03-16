@@ -16,22 +16,22 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 var Bootcamp = /*#__PURE__*/function () {
-  function Bootcamp(_name) {
+  function Bootcamp(name) {
     _classCallCheck(this, Bootcamp);
 
-    this._name = _name;
-    this._kelas = this._kelas;
+    this._name = name;
+    this._kelas = [];
   }
 
   _createClass(Bootcamp, [{
-    key: "_name",
+    key: "name",
     get: function get() {
       return this._name;
     }
   }, {
-    key: "_classes",
+    key: "classes",
     get: function get() {
-      return this._classes;
+      return this._kelas;
     }
   }, {
     key: "createClass",

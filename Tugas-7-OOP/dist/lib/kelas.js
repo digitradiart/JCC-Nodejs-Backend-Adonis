@@ -16,36 +16,34 @@ var Kelas = /*#__PURE__*/function () {
     _classCallCheck(this, Kelas);
 
     this._name = name;
-    this._student = [];
+    this._students = [];
     this._level = level;
     this._instructor = instructor;
   }
 
   _createClass(Kelas, [{
-    key: "_name",
+    key: "name",
     get: function get() {
       return this._name;
     },
     set: function set(x) {
-      return this._name = x;
+      this._name = x;
     }
   }, {
-    key: "_level",
+    key: "level",
     get: function get() {
       return this._level;
     },
     set: function set(x) {
-      return this._level = x;
+      this._level = x;
     }
   }, {
     key: "instructor",
     get: function get() {
       return this._instructor;
-    }
-  }, {
-    key: "_instructor",
+    },
     set: function set(x) {
-      return this._instructor = x;
+      this._instructor = x;
     }
   }]);
 

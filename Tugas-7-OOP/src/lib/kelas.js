@@ -1,32 +1,27 @@
 export default class Kelas {
   constructor(name, level, instructor) {
     this._name = name;
-    this._student = [];
+    this._students = [];
     this._level = level;
     this._instructor = instructor;
   }
 
-  get _name() {
+  get name() {
     return this._name;
   }
-
-  set _name(x) {
-    return (this._name = x);
+  set name(x) {
+    this._name = x;
   }
-
-  get _level() {
+  get level() {
     return this._level;
   }
-
-  set _level(x) {
-    return (this._level = x);
+  set level(x) {
+    this._level = x;
   }
-
   get instructor() {
     return this._instructor;
   }
-
-  set _instructor(x) {
-    return (this._instructor = x);
+  set instructor(x) {
+    this._instructor = x;
   }
 }
