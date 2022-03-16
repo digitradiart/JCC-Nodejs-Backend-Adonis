@@ -16,6 +16,7 @@ var Student = /*#__PURE__*/_createClass(function Student(nama) {
 
   this._name = nama;
   this._scores = [];
+  this._finalScore = 0;
 });
 
 exports["default"] = Student;
