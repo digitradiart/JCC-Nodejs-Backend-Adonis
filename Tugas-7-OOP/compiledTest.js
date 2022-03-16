@@ -135,6 +135,10 @@ mycar4.carname = 'Volvo'; // memanggil setter, mengubah Ford menjadi Volvo
 console.log(mycar4.carname); // Volvo
 // ASSOCIATION
 
+/*Association
+Assosiasi adalah sebuah relasi dimana semua object memiliki lifecycle nya sendiri dan tidak ada yang bertindak sebagai parent/owner atas class lainnya. Contohnya class Teacher dan class Student. Teacher dapat memiliki banyak Student. Begitu pun Student dapat memiliki banyak Teacher yang diikuti. Kedua class dapat membuat Object nya masing-masing tanpa tergantung oleh object lain. Ketika object Teacher dihapus maka object Student tetap ada.
+ */
+
 var Teacher = /*#__PURE__*/function () {
   function Teacher(name) {
     _classCallCheck(this, Teacher);
@@ -189,3 +193,117 @@ abduh.addStudent(regi);
 console.log(abduh.students);
 regi.chooseTeachers(abduh);
 console.log(regi.teachers);
+/*Aggregation
+Aggregation adalah relasi yang lebih khusus dari Association dimana suatu class dapat berdiri sendiri tapi terdapat class child dan class parent. class yang menjadi child  tidak dapat memiliki class parent sedangkan class Parent dapat memiliki class child. Kedua class dapat membuat object nya masing-masing tanpa tergantung oleh object lain. Ketika object Parent dihapus maka object child tetap ada (tidak ikut terhapus).
+
+Contohnya adalah Teacher dan Department. Suatu Department dapat memiliki banyak Teacher. Tapi Teacher tidak dapat memiliki Department. Ketika object Department dihapus/tidak ada maka object Teacher tetap ada.  */
+
+var Teacher2 = /*#__PURE__*/function () {
+  function Teacher2(name) {
+    _classCallCheck(this, Teacher2);
+
+    this._name = name;
+    this._students = [];
+  }
+
+  _createClass(Teacher2, [{
+    key: "addStudent",
+    value: function addStudent(student) {
+      this._students.push(student);
+    }
+  }, {
+    key: "students",
+    get: function get() {
+      return this._students;
+    }
+  }]);
+
+  return Teacher2;
+}();
+
+var Department = /*#__PURE__*/function () {
+  function Department(name) {
+    _classCallCheck(this, Department);
+
+    this._name = name;
+    this._teachers = [];
+  }
+
+  _createClass(Department, [{
+    key: "assignTeacher",
+    value: function assignTeacher(teacher) {
+      this._teachers.push(teacher);
+    }
+  }, {
+    key: "teachers",
+    get: function get() {
+      return this._teachers;
+    }
+  }]);
+
+  return Department;
+}(); // Object Creation
+
+
+var abduh2 = new Teacher2('abduh');
+var fmipa = new Department('FMIPA');
+fmipa.assignTeacher(abduh2);
+console.log(fmipa.teachers);
+/**Composition
+Composition adalah relasi antar dua object dimana lifecycle object child bergantung dengan object parent nya. Ciri dari relasi ini yaitu object child diinstance di dalam class parent nya. Berbeda dengan aggregation, di dalam composition ketika object parent nya tidak ada / dihapus maka object child akan ikut terhapus. 
+
+Contohnya adalah University dan Department. suatu Department hanya akan eksis di suatu University tertentu. Ketika University nya dihapus/tidak ada maka Department akan ikut terhapus. 
+
+ */
+
+var Department2 = /*#__PURE__*/function () {
+  function Department2(name) {
+    _classCallCheck(this, Department2);
+
+    this._name = name;
+    this._teachers = [];
+  }
+
+  _createClass(Department2, [{
+    key: "assignTeacher",
+    value: function assignTeacher(teacher) {
+      this._teachers.push(teacher);
+    }
+  }, {
+    key: "teachers",
+    get: function get() {
+      return this._teachers;
+    }
+  }]);
+
+  return Department2;
+}();
+
+var University = /*#__PURE__*/function () {
+  function University(name) {
+    _classCallCheck(this, University);
+
+    this._name = name;
+    this._departments = [];
+  }
+
+  _createClass(University, [{
+    key: "addDepartment",
+    value: function addDepartment(department_name) {
+      var department = new Department(department_name);
+
+      this._departments.push(department);
+    }
+  }, {
+    key: "departments",
+    get: function get() {
+      return this._departments;
+    }
+  }]);
+
+  return University;
+}();
+
+var itebe = new University('itebeh');
+itebe.addDepartment('fmipa');
+console.log(itebe.departments);
