@@ -26,3 +26,22 @@ export const login = (param) => {
       console.log(err);
     });
 };
+
+export const addSiswa = async (param) => {
+  try {
+    let dataRead = await fspromise.readFile(path);
+    let realData = JSON.parse(dataRead);
+    let [name, trainerName] = param.split(',');
+    let index = realData.findIndex((item) => item.name == trainerName);
+    if (index !== -1) {
+      realData[index]['students'] = [];
+      realData[index].students.push({ name });
+      console.log('Berhasil add siswa');
+    } else {
+      console.log('Data tidak ditemukan');
+    }
+    await fspromise.writeFile(path, JSON.stringify(realData));
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.login = void 0;
+exports.login = exports.addSiswa = void 0;
 
 var _promises = _interopRequireDefault(require("fs/promises"));
 
@@ -12,6 +12,10 @@ require("core-js/stable");
 require("regenerator-runtime/runtime");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -58,3 +62,60 @@ var login = function login(param) {
 };
 
 exports.login = login;
+
+var addSiswa = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(param) {
+    var dataRead, realData, _param$split3, _param$split4, name, trainerName, index;
+
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.prev = 0;
+            _context.next = 3;
+            return _promises["default"].readFile(path);
+
+          case 3:
+            dataRead = _context.sent;
+            realData = JSON.parse(dataRead);
+            _param$split3 = param.split(','), _param$split4 = _slicedToArray(_param$split3, 2), name = _param$split4[0], trainerName = _param$split4[1];
+            index = realData.findIndex(function (item) {
+              return item.name == trainerName;
+            });
+
+            if (index !== -1) {
+              realData[index]['students'] = [];
+              realData[index].students.push({
+                name: name
+              });
+              console.log('Berhasil add siswa');
+            } else {
+              console.log('Data tidak ditemukan');
+            }
+
+            _context.next = 10;
+            return _promises["default"].writeFile(path, JSON.stringify(realData));
+
+          case 10:
+            _context.next = 15;
+            break;
+
+          case 12:
+            _context.prev = 12;
+            _context.t0 = _context["catch"](0);
+            console.log(_context.t0);
+
+          case 15:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[0, 12]]);
+  }));
+
+  return function addSiswa(_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+exports.addSiswa = addSiswa;
