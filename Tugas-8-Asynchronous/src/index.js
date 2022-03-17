@@ -1,5 +1,5 @@
 import { readData, writeData } from './lib/fscallback';
-
+import { deleteData } from './lib/fspromise';
 const args = process.argv.slice(2);
 const command = args[0];
 
@@ -19,6 +19,10 @@ switch (command) {
     writeData(obj);
     break;
 
+  case 'deleteData':
+    let param = args[2];
+    deleteData(param);
+    break;
   default:
     break;
 }

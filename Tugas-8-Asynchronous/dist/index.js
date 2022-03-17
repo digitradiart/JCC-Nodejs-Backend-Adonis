@@ -2,6 +2,8 @@
 
 var _fscallback = require("./lib/fscallback");
 
+var _fspromise = require("./lib/fspromise");
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -43,6 +45,11 @@ switch (command) {
     obj[key2] = val2;
     console.log(obj);
     (0, _fscallback.writeData)(obj);
+    break;
+
+  case 'deleteData':
+    var param = args[2];
+    (0, _fspromise.deleteData)(param);
     break;
 
   default:
