@@ -1,1 +1,1 @@
-[{"nama":"abdul","kelas":"laravel"},{"nama":"ayu","kelas":"react JS"},{"nama":"Bondra","kelas":"Vue"},{"nama":"Ayu","kelas":"React"}]
+[{"name":"Bondra","password":"123456","role":"admin","isLogin":true},{"name":"Abduh","password":"123456","role":"trainer","isLogin":false},{"name":"Abdul","password":"123456","role":"student","isLogin":true}]
