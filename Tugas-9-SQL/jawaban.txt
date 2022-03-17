@@ -36,11 +36,9 @@ CREATE TABLE users(
 ################ Soal 3 Membuat Table di Dalam Database ################
 # Table users
 INSERT INTO users (name, email, password)
-    -> VALUES ("John Doe", "john@doe.com","john123")
-    -> ;
+    -> VALUES ("John Doe", "john@doe.com","john123");
 INSERT INTO users (name, email, password)
-    -> VALUES ("Jane Doe", "jane@doe.com","jenita123")
-    -> ;
+    -> VALUES ("Jane Doe", "jane@doe.com","jenita123");
 
 # Table categories
 INSERT INTO categories (name) VALUES ("gadget");
