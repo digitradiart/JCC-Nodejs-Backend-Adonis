@@ -1,5 +1,5 @@
 import { readData, writeData } from './lib/fscallback';
-import { login, addSiswa } from './lib/fspromise';
+import { login, addSiswa, deleteData } from './lib/fspromise';
 const args = process.argv.slice(2);
 const command = args[0];
 
@@ -38,6 +38,14 @@ switch (command) {
     }
     break;
 
+  case 'deleteData':
+    let param3 = args[1];
+    if (param3 !== undefined) {
+      deleteData(param3);
+    } else {
+      console.log('inputan salah');
+    }
+    break;
   default:
     console.log('inputan salah');
     break;

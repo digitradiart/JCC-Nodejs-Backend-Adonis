@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.login = exports.addSiswa = void 0;
+exports.login = exports.deleteData = exports.addSiswa = void 0;
 
 var _promises = _interopRequireDefault(require("fs/promises"));
 
@@ -119,3 +119,20 @@ var addSiswa = /*#__PURE__*/function () {
 }();
 
 exports.addSiswa = addSiswa;
+
+var deleteData = function deleteData(param) {
+  _promises["default"].readFile(path).then(function (data) {
+    var realData = JSON.parse(data);
+    var indexDelete = realData.findIndex(function (item) {
+      return item.name == param;
+    });
+    realData.splice(indexDelete, 1);
+    return _promises["default"].writeFile(path, JSON.stringify(realData));
+  }).then(function () {
+    return console.log('Berhasil hapus');
+  })["catch"](function (err) {
+    return console.log(err);
+  });
+};
+
+exports.deleteData = deleteData;

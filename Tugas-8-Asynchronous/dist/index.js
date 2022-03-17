@@ -63,6 +63,17 @@ switch (command) {
 
     break;
 
+  case 'deleteData':
+    var param3 = args[1];
+
+    if (param3 !== undefined) {
+      (0, _fspromise.deleteData)(param3);
+    } else {
+      console.log('inputan salah');
+    }
+
+    break;
+
   default:
     console.log('inputan salah');
     break;

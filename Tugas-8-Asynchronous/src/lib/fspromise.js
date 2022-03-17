@@ -45,3 +45,16 @@ export const addSiswa = async (param) => {
     console.log(error);
   }
 };
+
+export const deleteData = (param) => {
+  fspromise
+    .readFile(path)
+    .then((data) => {
+      let realData = JSON.parse(data);
+      let indexDelete = realData.findIndex((item) => item.name == param);
+      realData.splice(indexDelete, 1);
+      return fspromise.writeFile(path, JSON.stringify(realData));
+    })
+    .then(() => console.log('Berhasil hapus'))
+    .catch((err) => console.log(err));
+};

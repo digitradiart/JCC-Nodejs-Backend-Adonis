@@ -1,11 +1,1 @@
-[
-  { "name": "Bondra", "password": "123456", "role": "admin", "isLogin": true },
-  { "name": "Abduh", "password": "123456", "role": "trainer", "isLogin": true },
-  { "name": "Abdul", "password": "123456", "role": "student", "isLogin": true },
-  { "name": "Regy", "password": "12245", "role": "student", "isLogin": false },
-  { "name": "Bondra", "password": "123456", "role": "admin", "isLogin": false },
-  { "name": "Bondra", "password": "123456", "role": "admin", "isLogin": false },
-  { "name": "Bondra", "password": "123456", "role": "admin", "isLogin": false },
-  { "name": "Bondra", "password": "123456", "role": "admin", "isLogin": false },
-  { "name": "Iqbal", "password": "123456", "role": "false", "isLogin": false, "students": [{ "name": "Regy" }] }
-]
+[{"name":"Abduh","password":"123456","role":"trainer","isLogin":true},{"name":"Regy","password":"12245","role":"student","isLogin":false},{"name":"Bondra","password":"123456","role":"admin","isLogin":false},{"name":"Iqbal","password":"123456","role":"false","isLogin":false,"students":[{"name":"Regy"}]},{"name":"Abdul","password":"112233","role":"admin","isLogin":false}]
