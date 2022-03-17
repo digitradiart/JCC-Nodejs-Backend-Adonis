@@ -56,3 +56,24 @@ INSERT INTO items (name, description, price, stock, category_id) VALUES ("Uniklo
 INSERT INTO items (name, description, price, stock, category_id) VALUES ("IMHO", "jam tangan anak yang jujur banget", 2000000, 10, 1);
 
 
+################ Soal 4 Mengambil Data dari Database###############
+# a. Mengambil data users
+Buatlah sebuah query untuk mendapatkan data seluruh user pada table users. Sajikan semua field pada table users KECUALI password nya.
+
+SELECT name, email FROM users;
+
+# b. Mengambil data items
+Buatlah sebuah query untuk mendapatkan data item pada table items yang memiliki harga di atas 1000000 (satu juta).
+SELECT * FROM items WHERE price > 1000000;
+
+# Buat sebuah query untuk mengambil data item pada table items yang memiliki name serupa atau mirip (like) dengan kata kunci “uniklo”, “watch”, atau “sang” (pilih salah satu saja).
+SELECT * FROM items WHERE name LIKE "%uniklo%";
+SELECT * FROM items WHERE name LIKE "%sang%";
+SELECT * FROM items WHERE name LIKE "%watch%";
+
+# c. Menampilkan data items join dengan kategori
+Buatlah sebuah query untuk menampilkan data items yang dilengkapi dengan data nama kategori di masing-masing items. 
+SELECT items.name, items.description, items.price, items.stock, items.category_id, categories.name
+    -> FROM items
+    -> JOIN categories
+    -> ON items.category_id = categories.id ;
