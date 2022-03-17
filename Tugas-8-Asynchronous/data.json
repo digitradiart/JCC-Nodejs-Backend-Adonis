@@ -1,1 +1,8 @@
-[]
+[
+  { "nama": "abduh", "kelas": "adonis" },
+  {
+    "nama": "abdul",
+    "kelas": "laravel"
+  },
+  { "nama": "ayu", "kelas": "react JS" }
+]
