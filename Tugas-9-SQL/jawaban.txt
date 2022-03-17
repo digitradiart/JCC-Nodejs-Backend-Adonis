@@ -1,0 +1,33 @@
+################ Soal 1 Membuat Database ################
+# Buatlah database dengan nama “myshop”. Tulislah di text jawaban pada nomor 1.
+CREATE DATABASE myshop;
+
+################ Soal 2 Membuat Table di Dalam Database ################
+# Table categories
+CREATE TABLE categories (
+    -> id int(8) AUTO_INCREMENT,
+    -> name varchar(255),
+    -> primary key(id)
+    -> );
+
+
+# Table items 
+CREATE TABLE items(
+    -> id int(8) auto_increment,
+    -> name varchar(255),
+    -> description varchar(255),
+    -> price int(8),
+    -> category_id int(8),
+    -> stock int(8),
+    -> primary key(id),
+    -> foreign key(category_id) references categories(id)
+    -> );
+
+# Table users
+CREATE TABLE users(
+    -> id int(8) auto_increment,
+    -> name varchar(255),
+    -> email varchar(255),
+    -> password varchar(255),
+    -> primary key(id)
+    -> );
