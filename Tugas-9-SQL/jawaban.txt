@@ -77,3 +77,9 @@ SELECT items.name, items.description, items.price, items.stock, items.category_i
     -> FROM items
     -> JOIN categories
     -> ON items.category_id = categories.id ;
+
+################ Soal 5 Mengubah Data dari Database ###############
+# Ubahlah data pada table items untuk item dengan nama sumsang harganya (price) menjadi 2500000. Masukkan query pada text jawaban di nomor ke 5.
+UPDATE items
+    -> SET price = 2500000
+    -> WHERE name LIKE "%sumsang%";
