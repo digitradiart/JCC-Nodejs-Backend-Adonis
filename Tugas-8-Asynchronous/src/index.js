@@ -17,7 +17,7 @@ switch (command) {
     }
     break;
 
-  case 'addSiswa':
+  case 'register':
     let [value1, value2, value3] = args[1].split(',');
     let obj = {
       name: value1,
@@ -26,7 +26,16 @@ switch (command) {
       isLogin: false,
     };
     writeData(obj);
-    console.log('Berhasil menambahkan siswa');
+    console.log('Berhasil register');
+    break;
+
+  case 'addSiswa':
+    let param2 = args[1];
+    if (param2 !== undefined) {
+      addSiswa(param2);
+    } else {
+      console.log('inputan salah');
+    }
     break;
 
   default:

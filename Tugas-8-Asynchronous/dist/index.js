@@ -35,7 +35,7 @@ switch (command) {
 
     break;
 
-  case 'addSiswa':
+  case 'register':
     var _args$1$split = args[1].split(','),
         _args$1$split2 = _slicedToArray(_args$1$split, 3),
         value1 = _args$1$split2[0],
@@ -49,7 +49,18 @@ switch (command) {
       isLogin: false
     };
     (0, _fscallback.writeData)(obj);
-    console.log('Berhasil menambahkan siswa');
+    console.log('Berhasil register');
+    break;
+
+  case 'addSiswa':
+    var param2 = args[1];
+
+    if (param2 !== undefined) {
+      (0, _fspromise.addSiswa)(param2);
+    } else {
+      console.log('inputan salah');
+    }
+
     break;
 
   default:
