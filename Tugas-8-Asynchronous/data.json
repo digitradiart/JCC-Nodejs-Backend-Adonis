@@ -1,8 +1,6 @@
 [
   { "nama": "abduh", "kelas": "adonis" },
-  {
-    "nama": "abdul",
-    "kelas": "laravel"
-  },
-  { "nama": "ayu", "kelas": "react JS" }
+  { "nama": "abdul", "kelas": "laravel" },
+  { "nama": "ayu", "kelas": "react JS" },
+  { "nama": "Bondra", "kelas": "Vue" }
 ]
