@@ -39,7 +39,7 @@ const editData = (update) => {
     .catch((err) => console.log(err));
 };
 
-// async await
+// Async Await
 const editData = async (update) => {
   let dataRead = await fspromise.readFile('data.json');
   let data = JSON.parse(dataRead);
