@@ -24,3 +24,26 @@ OlahString.ubahKapital('abduh') // Output: Abduh
 
 
 Bobot soal: 20 */
+
+class OlahString {
+  palindrome(str) {
+    for (let i = 0; i < str.length / 2; i++) {
+      if (str[i] !== str[str.length - 1 - i]) return false;
+    }
+    return true;
+  }
+
+  ubahKapital(str) {
+    let newStr = str.split('');
+    newStr[0] = newStr[0].toUpperCase();
+    return newStr.join('');
+  }
+}
+
+const olahstring = new OlahString('');
+
+console.log(olahstring.palindrome('kakak'));
+console.log(olahstring.palindrome('makan'));
+console.log(olahstring.palindrome('malam'));
+console.log(olahstring.ubahKapital('asep'));
+console.log(olahstring.ubahKapital('abduh'));
