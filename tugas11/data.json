@@ -1,8 +1,8 @@
 {
   "users": [
-    { "name": "Ayu", "role": "admin", "password": "123456" },
-    { "name": "Bondra", "role": "tutor", "password": "123456" },
-    { "name": "Agus", "role": "student", "password": "123456" }
+    { "name": "Ayu", "role": "admin", "password": "123456", "isLogin": true },
+    { "name": "Bondra", "role": "tutor", "password": "123456", "isLogin": true },
+    { "name": "Agus", "role": "student", "password": "123456", "isLogin": false }
   ],
   "students": []
 }
