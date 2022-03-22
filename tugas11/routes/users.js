@@ -16,4 +16,6 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/register', UserController.register);
+router.post('/login', UserController.login);
+router.post('/karyawan/:name/siswa', UserController.addSiswa);
 module.exports = router;

@@ -1,1 +1,10 @@
-{"users":[{"name":"Ayu","role":"admin","password":"123456","isLogin":true},{"name":"Bondra","role":"tutor","password":"123456","isLogin":true},{"name":"Agus","role":"student","password":"123456","isLogin":false},{"name":"SAYA","role":"trainer","password":"123456","isLogin":"false"}],"students":[]}
+{
+  "users": [
+    { "name": "Ayu", "role": "admin", "password": "123456", "isLogin": true, "students": [{ "name": "Regy" }] },
+    { "name": "Agus", "role": "student", "password": "123456", "isLogin": false },
+    { "name": "SAYA", "role": "trainer", "password": "123456", "isLogin": "false" },
+    {},
+    { "name": "Bondra", "role": "mentor", "password": "bondra123", "isLogin": "true" }
+  ],
+  "students": []
+}
