@@ -8,6 +8,12 @@ const UserController = require('../controllers/users');
 // router.get('/', function (req, res, next) {
 //   res.send('respond with a resource');
 // });
+
 router.get('/', UserController.findAll);
 
+router.get('/:id', (req, res) => {
+  res.send(`Selamat datang ${req.params.id}. Terima kasih sudah menjadi user.`);
+});
+
+router.post('/register', UserController.register);
 module.exports = router;
