@@ -5,11 +5,11 @@ var router = express.Router();
 const UserController = require('../controllers/users');
 
 /* GET users listing. */
-// router.get('/', function (req, res, next) {
-//   res.send('respond with a resource');
-// });
+router.get('/', function (req, res, next) {
+  res.send('respond with a resource');
+});
 
-router.get('/', UserController.findAll);
+router.get('/karyawan', UserController.showAll);
 
 router.get('/:id', (req, res) => {
   res.send(`Selamat datang ${req.params.id}. Terima kasih sudah menjadi user.`);

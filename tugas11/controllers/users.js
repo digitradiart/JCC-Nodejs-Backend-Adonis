@@ -1,17 +1,7 @@
 const fs = require('fs');
 
 class UserController {
-  static findAll(req, res) {
-    fs.readFile('data.json', (err, data) => {
-      if (err) {
-        res.status(400).json({ errors: 'error membaca data' });
-      } else {
-        let realData = JSON.parse(data);
-        res.status(200).json({ message: 'berhasil membaca data', data: realData.users });
-      }
-    });
-  }
-
+  // release 0
   static register(req, res) {
     fs.readFile('data.json', (err, data) => {
       if (err) {
@@ -46,6 +36,18 @@ class UserController {
         } else {
           res.send({ message: 'Role admin telah terdaftar' });
         }
+      }
+    });
+  }
+
+  // release 1
+  static showAll(req, res) {
+    fs.readFile('data.json', (err, data) => {
+      if (err) {
+        res.status(400).json({ errors: 'error membaca data' });
+      } else {
+        let realData = JSON.parse(data);
+        res.status(200).json({ message: 'Berhasil get data users', data: realData.users });
       }
     });
   }
