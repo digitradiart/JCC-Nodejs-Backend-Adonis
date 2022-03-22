@@ -1,1 +1,8 @@
-{"users":[{"name":"Ayu","role":"admin","password":"123456"}],"students":[]}
+{
+  "users": [
+    { "name": "Ayu", "role": "admin", "password": "123456" },
+    { "name": "Bondra", "role": "tutor", "password": "123456" },
+    { "name": "Agus", "role": "student", "password": "123456" }
+  ],
+  "students": []
+}
