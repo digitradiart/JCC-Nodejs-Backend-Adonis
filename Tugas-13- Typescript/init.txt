@@ -1,0 +1,3 @@
+https://www.codecademy.com/courses/learn-typescript/articles/the-tsconfig-json-file
+
+belajar typescript
