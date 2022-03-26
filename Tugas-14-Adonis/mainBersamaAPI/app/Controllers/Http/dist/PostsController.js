@@ -1,23 +1,4 @@
 "use strict";
-/*
-|--------------------------------------------------------------------------
-| Routes
-|--------------------------------------------------------------------------
-|
-| This file is dedicated for defining HTTP routes. A single file is enough
-| for majority of projects, however you can define routes in different
-| files and just make sure to import them inside this file. For example
-|
-| Define routes in following two files
-| ├── start/routes/cart.ts
-| ├── start/routes/customer.ts
-|
-| and then import them inside `start/routes.ts` as follows
-|
-| import './routes/cart'
-| import './routes/customer'
-|
-*/
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -55,16 +36,20 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-var Route_1 = require("@ioc:Adonis/Core/Route");
-Route_1["default"].get("/", function () { return __awaiter(void 0, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        return [2 /*return*/, { hello: "world" }];
-    });
-}); }).as("home");
-// Route.get("/testing/:b", async ({ request, params }: HttpContextContract) => {
-//   let a: number = 12;
-//   // let b: number = 24;
-//   console.log(request.qs()); //query string, keliatan di console
-//   return { test: "testing pake adonis", total: a + parseInt(params.b) };
-// }).as("testing");
-Route_1["default"].get("/testing/:b", "PostsController.index");
+var PostsController = /** @class */ (function () {
+    function PostsController() {
+    }
+    PostsController.prototype.index = function (_a) {
+        var request = _a.request, response = _a.response, params = _a.params;
+        return __awaiter(this, void 0, void 0, function () {
+            var name;
+            return __generator(this, function (_b) {
+                name = request.qs().name;
+                response.status(200).json({ name: name, b: params.b });
+                return [2 /*return*/];
+            });
+        });
+    };
+    return PostsController;
+}());
+exports["default"] = PostsController;
