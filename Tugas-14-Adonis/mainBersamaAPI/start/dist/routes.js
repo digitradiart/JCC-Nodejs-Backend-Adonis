@@ -56,6 +56,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var Route_1 = require("@ioc:Adonis/Core/Route");
+// import { HttpContextContract } from "@ioc:Adonis/Core/HttpContext";
 Route_1["default"].get("/", function () { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         return [2 /*return*/, { hello: "world" }];
@@ -67,4 +68,5 @@ Route_1["default"].get("/", function () { return __awaiter(void 0, void 0, void 
 //   console.log(request.qs()); //query string, keliatan di console
 //   return { test: "testing pake adonis", total: a + parseInt(params.b) };
 // }).as("testing");
-Route_1["default"].get("/testing/:b", "PostsController.index");
+Route_1["default"].get("/testing/:b", "ContactsController.index");
+Route_1["default"].post("/contacts", "ContactsController.store");

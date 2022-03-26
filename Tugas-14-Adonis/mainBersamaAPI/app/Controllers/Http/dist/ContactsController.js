@@ -36,10 +36,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-var PostsController = /** @class */ (function () {
-    function PostsController() {
+var Validator_1 = require("@ioc:Adonis/Core/Validator");
+var ContactsController = /** @class */ (function () {
+    function ContactsController() {
     }
-    PostsController.prototype.index = function (_a) {
+    ContactsController.prototype.index = function (_a) {
         var request = _a.request, response = _a.response, params = _a.params;
         return __awaiter(this, void 0, void 0, function () {
             var name;
@@ -50,6 +51,25 @@ var PostsController = /** @class */ (function () {
             });
         });
     };
-    return PostsController;
+    ContactsController.prototype.store = function (_a) {
+        var request = _a.request;
+        return __awaiter(this, void 0, void 0, function () {
+            var contactSchema, payload;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        contactSchema = Validator_1.schema.create({
+                            name: Validator_1.schema.string({}, [Validator_1.rules.alpha(), Validator_1.rules.minLength(5)]),
+                            email: Validator_1.schema.string({}, [Validator_1.rules.email()])
+                        });
+                        return [4 /*yield*/, request.validate({ schema: contactSchema })];
+                    case 1:
+                        payload = _b.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return ContactsController;
 }());
-exports["default"] = PostsController;
+exports["default"] = ContactsController;

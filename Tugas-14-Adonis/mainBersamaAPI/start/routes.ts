@@ -19,7 +19,7 @@
 */
 
 import Route from "@ioc:Adonis/Core/Route";
-import { HttpContextContract } from "@ioc:Adonis/Core/HttpContext";
+// import { HttpContextContract } from "@ioc:Adonis/Core/HttpContext";
 
 Route.get("/", async () => {
   return { hello: "world" };
@@ -33,4 +33,5 @@ Route.get("/", async () => {
 //   return { test: "testing pake adonis", total: a + parseInt(params.b) };
 // }).as("testing");
 
-Route.get("/testing/:b", "PostsController.index");
+Route.get("/testing/:b", "ContactsController.index");
+Route.post("/contacts", "ContactsController.store");
