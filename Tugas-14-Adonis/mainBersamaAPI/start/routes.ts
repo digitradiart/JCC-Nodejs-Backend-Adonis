@@ -28,7 +28,7 @@ Route.get("/", async () => {
 Route.get("/testing/:b", async ({ request, params }: HttpContextContract) => {
   let a: number = 12;
   // let b: number = 24;
-  console.log(request.param("b"));
+  console.log(request.qs()); //query string, keliatan di console
 
   return { test: "testing pake adonis", total: a + parseInt(params.b) };
 }).as("testing");

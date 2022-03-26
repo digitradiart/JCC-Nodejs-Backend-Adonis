@@ -68,7 +68,7 @@ Route_1["default"].get("/testing/:b", function (_a) {
         return __generator(this, function (_b) {
             a = 12;
             // let b: number = 24;
-            console.log(request.param("b"));
+            console.log(request.qs()); //query string, keliatan di console
             return [2 /*return*/, { test: "testing pake adonis", total: a + parseInt(params.b) }];
         });
     });
