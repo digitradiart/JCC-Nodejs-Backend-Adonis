@@ -19,11 +19,16 @@
 */
 
 import Route from "@ioc:Adonis/Core/Route";
+import { HttpContextContract } from "@ioc:Adonis/Core/HttpContext";
 
 Route.get("/", async () => {
   return { hello: "world" };
-});
+}).as("home");
 
-Route.get("/testing", async () => {
-  return { test: "testing pake adonis" };
-});
+Route.get("/testing/:b", async ({ request, params }: HttpContextContract) => {
+  let a: number = 12;
+  // let b: number = 24;
+  console.log(request.param("b"));
+
+  return { test: "testing pake adonis", total: a + parseInt(params.b) };
+}).as("testing");
