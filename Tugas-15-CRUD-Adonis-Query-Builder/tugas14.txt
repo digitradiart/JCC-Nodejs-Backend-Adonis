@@ -1,0 +1,27 @@
+Tugas : Membuat REST API Adonis
+Langkah Pengerjaan
+Buat folder baru di repositori tugas kalian dengan nama "Tugas 14 - REST API Adonis"
+Kerjakanlah tugas berikut di dalam folder tersebut
+API Main Bersama
+Tugas kali ini kalian diminta membuat REST API menggunakan Adonis v5.
+
+Release 0 Form Venue (Validasi)
+Buatlah sebuah endpoint untuk membuat data venue baru. Buatlah validasi untuk data yang diberikan di form venue baru di antaranya :
+
+endpoint : POST /venues
+
+nama (required, string),
+alamat (required, string),
+phone (required, string, mobile phone)
+Hint : Validasi untuk mobile phone dapat dibaca di dokumentasi adonis berikut : https://docs.adonisjs.com/reference/validator/rules/mobile
+
+Release 1 Form Booking
+Buatlah sebuah endpoint untuk melakukan booking suatu venue atau lapangan.
+
+endpoint : POST /bookings
+
+Terdapat data yang harus diisi :
+
+nama pem-booking (required,string)
+nama venue yang dibook (required, string)
+tanggal dan waktu main (required, date, minimal booking 1 hari sebelum)
